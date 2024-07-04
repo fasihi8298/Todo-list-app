@@ -1,0 +1,24 @@
+*,
+*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url();
+    background-position: center;
+
+}
+
+h1{
+    color: #eee;
+    text-align: center;
+    margin-bottom: 36px;
+}
