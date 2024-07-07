@@ -24,3 +24,20 @@ function getTodoHtml(todo, index) {
     </li>
   `; 
 }
+
+function showTodos() {
+  if (todosJson.length == 0) {
+    todosHtml.innerHTML = '';
+    emptyImage.style.display = 'block';
+  } else {
+    todosHtml.innerHTML = todosJson.map(getTodoHtml).join('');
+    emptyImage.style.display = 'none';
+  }
+}
+
+function addTodo(todo)  {
+  input.value = "";
+  todosJson.unshift({ name: todo, status: "pending" });
+  localStorage.setItem("todos", JSON.stringify(todosJson));
+  showTodos();
+}
